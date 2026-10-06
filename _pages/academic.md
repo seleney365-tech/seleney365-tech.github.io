@@ -6,9 +6,10 @@ author_profile: true
 ---
 
 <style>
+  /* 学校名：最大 */
   .school-title {
     color: #2a7ae2;
-    font-size: 1.4em;
+    font-size: 1.6em;
     font-weight: bold;
     margin-bottom: 0.2em;
   }
@@ -17,12 +18,19 @@ author_profile: true
     font-size: 0.9em;
     margin-bottom: 1.2em;
   }
+
+  /* 分类标题（如 Core Courses in Economics）：明显比课程名大 */
   .section-title {
-    color: #2a7ae2;
-    border-bottom: 1px solid #d0d7de;
+    color: #1a4f8a;
+    font-size: 1.25em;
+    font-weight: bold;
+    border-bottom: 2px solid #2a7ae2;
     padding-bottom: 4px;
     margin-top: 2em;
+    margin-bottom: 1em;
   }
+
+  /* 课程名：次级 */
   .course-item {
     margin-bottom: 1em;
   }

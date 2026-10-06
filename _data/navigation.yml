@@ -2,12 +2,12 @@
 main:
   - title: "Home"
     url: /
-  - title: "Academic"
-    url: /academic/
-  - title: "Publications & Competitions"
-    url: /publications/
   - title: "Career"
     url: /career/
+  - title: "Publications & Competitions"
+    url: /publications/
+  - title: "Academic"
+    url: /academic/
   - title: "Skills & Activities"
     url: /skills/
   - title: "Contact"

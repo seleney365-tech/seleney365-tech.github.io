@@ -1,36 +1,82 @@
 ---
-layout: archive
-title: "Publications"
+layout: single
+title: "Publications & Competitions"
 permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<style>
+  .section-title {
+    color: #2a7ae2;
+    border-bottom: 1px solid #d0d7de;
+    padding-bottom: 4px;
+    margin-top: 2em;
+  }
+  .pub-item, .comp-item {
+    margin-bottom: 1.5em;
+  }
+  .pub-item strong, .comp-item strong {
+    color: #1a4f8a;
+    font-size: 1.05em;
+  }
+  .pub-item p, .comp-item p {
+    margin: 2px 0 0 0;
+    color: #333;
+    font-size: 0.95em;
+    line-height: 1.5;
+  }
+  .meta {
+    color: #666;
+    font-size: 0.9em;
+  }
+  .pub-item a {
+    color: #2a7ae2;
+    font-size: 0.9em;
+    text-decoration: none;
+  }
+  .pub-item a:hover {
+    text-decoration: underline;
+  }
+  .conf-list {
+    margin-top: 6px;
+    padding-left: 20px;
+  }
+  .conf-list li {
+    font-size: 0.9em;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 4px;
+  }
+</style>
 
-{% include base_path %}
+<h2 class="section-title">Publications</h2>
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+<div class="pub-item">
+  <strong>The Impact of Integrated Government Services on Inter-Provincial Capital Cross-Regional Flows</strong>
+  <p class="meta">Zhou D., <strong>Yang S.</strong>, Li P. · <em>World Economy Studies</em> · 2025</p>
+  <p><a href="https://oversea.cnki.net/kcms2/article/abstract?v=q63SQ8OIxqNcJWNKHvPio2TCXGc4FyYur743llZGB5DKx6PyrCFNYnGLNv9rnZeUYOxKu8v-1DnXnSO2cHUmBT4K8yNQgPhIFcz6newICykYfmk2gMtowYmPXg1-Rm-xc1YCkAUudMqOIdMkZ_2UrmuRXN3gTjflattBrOIJO1Q=&uniplatform=OVERSEA" target="_blank" rel="noopener">View on CNKI (知网) →</a></p>
+  <p class="meta" style="margin-top: 8px;"><strong>Conference Presentations:</strong></p>
+  <ul class="conf-list">
+    <li>Oct 2024 · The 2nd New Structural Economics South China Symposium, Institute of New Structural Economics, Peking University</li>
+    <li>Oct 2024 · The 23rd National Regional Economics Discipline Construction Annual Conference, Institute of Regional and Urban Economics, Renmin University of China</li>
+  </ul>
+</div>
 
+---
 
+<h2 class="section-title">Competitions</h2>
 
+<div class="comp-item">
+  <strong>National College Student Statistical Modeling Competition</strong>
+  <p class="meta">First Prize, Guangdong Province · 2024</p>
+</div>
+
+<div class="comp-item">
+  <strong>The 11th Energy Economics Competition</strong>
+  <p class="meta">Second Prize, Guangdong-Hong Kong-Macao Region · 2025</p>
+</div>
+
+<div class="comp-item">
+  <strong>Guangdong "Climbing Plan" (攀登计划) Project</strong>
+  <p class="meta">Approved Project · 2023 (Recommended for 2024 Guangdong Provincial Science and Technology Innovation Strategy Special Fund)</p>
+</div>

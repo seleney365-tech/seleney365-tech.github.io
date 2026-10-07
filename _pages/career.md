@@ -6,14 +6,17 @@ author_profile: true
 ---
 
 <style>
-  /* 目录：右上角小框，不浮动，靠右对齐 */
+  /* 目录：固定在右侧空白处 */
   .toc-box {
-    width: 240px;
-    margin: 0 0 25px auto;   /* auto 让它靠右 */
+    position: fixed;
+    top: 150px;
+    right: 30px;
+    width: 200px;
     background: #f5f8fc;
     border: 1px solid #d0d7de;
     border-radius: 8px;
     padding: 14px 18px;
+    z-index: 10;
   }
   .toc-box h4 {
     margin: 0 0 8px 0;
@@ -36,15 +39,13 @@ author_profile: true
     text-decoration: underline;
   }
 
-  /* 卡片：占满整行，不被压缩 */
+  /* 卡片：保持原宽度 */
   .card-block {
     background: #fafbfd;
     border: 1px solid #e1e4e8;
     border-radius: 10px;
     padding: 20px 24px;
     margin-bottom: 2em;
-    width: 100%;
-    box-sizing: border-box;
   }
   .card-block .block-title {
     color: #2a7ae2;
@@ -76,6 +77,15 @@ author_profile: true
   .school-meta {
     color: #666;
     font-size: 0.9em;
+  }
+
+  /* 窄屏：目录变成顶部普通块，避免遮挡 */
+  @media (max-width: 1200px) {
+    .toc-box {
+      position: static;
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 </style>
 

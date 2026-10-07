@@ -49,6 +49,23 @@ author_profile: true
     margin-top: 10px;
     margin-bottom: 4px;
   }
+
+  /* 简历下载按钮 */
+  .cv-button {
+    display: inline-block;
+    background: #2a7ae2;
+    color: #ffffff !important;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none !important;
+    margin-top: 10px;
+    transition: background 0.2s;
+  }
+  .cv-button:hover {
+    background: #1a4f8a;
+  }
 </style>
 
 <div class="card-block" id="contact">
@@ -72,10 +89,10 @@ author_profile: true
   </ul>
 </div>
 
-<div class="card-block" id="links">
-  <h2 class="block-title">🔗 Social &amp; Professional Links</h2>
-  <ul>
-    <li><strong>GitHub:</strong> <a href="https://github.com/seleney365-tech" target="_blank" rel="noopener">seleney365-tech</a></li>
-    <li><strong>LinkedIn:</strong> <!-- 你的 LinkedIn 链接，可稍后补充 --></li>
-  </ul>
+<div class="card-block" id="cv">
+  <h2 class="block-title">📄 Resume</h2>
+  <p style="color:#333; font-size:0.95em; line-height:1.6;">
+    Click below to view or download my full resume (PDF).
+  </p>
+  <a class="cv-button" href="/files/YANG Siying Resume-2609.pdf" target="_blank" rel="noopener">View / Download Resume (PDF) →</a>
 </div>

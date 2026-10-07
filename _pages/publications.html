@@ -6,30 +6,17 @@ author_profile: true
 ---
 
 <style>
-  /* 两栏布局 */
-  .pub-wrapper {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
-  }
-  .pub-main {
-    flex: 1;
-    min-width: 0;
-  }
-  .pub-sidebar {
-    width: 200px;
-    flex-shrink: 0;
-    position: sticky;
-    top: 80px;
-    align-self: flex-start;
-  }
-
-  /* 目录 */
+  /* 目录：固定在右侧空白处 */
   .toc-box {
+    position: fixed;
+    top: 150px;
+    right: 30px;
+    width: 200px;
     background: #f5f8fc;
     border: 1px solid #d0d7de;
     border-radius: 8px;
     padding: 14px 18px;
+    z-index: 10;
   }
   .toc-box h4 {
     margin: 0 0 8px 0;
@@ -52,7 +39,7 @@ author_profile: true
     text-decoration: underline;
   }
 
-  /* 卡片式区块 */
+  /* 卡片 */
   .card-block {
     background: #fafbfd;
     border: 1px solid #e1e4e8;
@@ -70,7 +57,6 @@ author_profile: true
     border-bottom: 2px solid #2a7ae2;
   }
 
-  /* 条目 */
   .pub-item, .comp-item {
     margin-bottom: 1.8em;
   }
@@ -113,111 +99,97 @@ author_profile: true
     margin-bottom: 4px;
   }
 
-  /* 窄屏幕适配 */
-  @media (max-width: 768px) {
-    .pub-wrapper {
-      flex-direction: column;
-    }
-    .pub-sidebar {
-      width: 100%;
+  /* 窄屏 */
+  @media (max-width: 1200px) {
+    .toc-box {
       position: static;
-      order: -1;
+      width: 100%;
+      margin-bottom: 20px;
     }
   }
 </style>
 
-<div class="pub-wrapper">
+<!-- 目录 -->
+<div class="toc-box">
+  <h4>Contents</h4>
+  <ul>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#competitions">Research &amp; Competition Projects</a></li>
+  </ul>
+</div>
 
-  <!-- 左侧主内容 -->
-  <div class="pub-main">
+<!-- 论文 -->
+<div class="card-block" id="publications">
+  <h2 class="block-title">Publications</h2>
 
-    <!-- Publications -->
-    <div class="card-block" id="publications">
-      <h2 class="block-title">Publications</h2>
+  <div class="pub-item">
+    <strong>The Impact of Integrated Government Services on Inter-Provincial Capital Cross-Regional Flows</strong>
+    <p class="meta">Zhou D., <strong>Yang S.</strong>, Li P. · <em>World Economy Studies</em> · 2025</p>
+    <p><a href="https://oversea.cnki.net/kcms2/article/abstract?v=q63SQ8OIxqNcJWNKHvPio2TCXGc4FyYur743llZGB5DKx6PyrCFNYnGLNv9rnZeUYOxKu8v-1DnXnSO2cHUmBT4K8yNQgPhIFcz6newICykYfmk2gMtowYmPXg1-Rm-xc1YCkAUudMqOIdMkZ_2UrmuRXN3gTjflattBrOIJO1Q=&uniplatform=OVERSEA" target="_blank" rel="noopener">View on CNKI (知网) →</a></p>
+    <p class="meta" style="margin-top: 8px;"><strong>Conference Presentations:</strong></p>
+    <ul class="conf-list">
+      <li>Oct 2024 · The 2nd New Structural Economics South China Symposium, Institute of New Structural Economics, Peking University</li>
+      <li>Oct 2024 · The 23rd National Regional Economics Discipline Construction Annual Conference, Institute of Regional and Urban Economics, Renmin University of China</li>
+    </ul>
+  </div>
+</div>
 
-      <div class="pub-item">
-        <strong>The Impact of Integrated Government Services on Inter-Provincial Capital Cross-Regional Flows</strong>
-        <p class="meta">Zhou D., <strong>Yang S.</strong>, Li P. · <em>World Economy Studies</em> · 2025</p>
-        <p><a href="https://oversea.cnki.net/kcms2/article/abstract?v=q63SQ8OIxqNcJWNKHvPio2TCXGc4FyYur743llZGB5DKx6PyrCFNYnGLNv9rnZeUYOxKu8v-1DnXnSO2cHUmBT4K8yNQgPhIFcz6newICykYfmk2gMtowYmPXg1-Rm-xc1YCkAUudMqOIdMkZ_2UrmuRXN3gTjflattBrOIJO1Q=&uniplatform=OVERSEA" target="_blank" rel="noopener">View on CNKI (知网) →</a></p>
-        <p class="meta" style="margin-top: 8px;"><strong>Conference Presentations:</strong></p>
-        <ul class="conf-list">
-          <li>Oct 2024 · The 2nd New Structural Economics South China Symposium, Institute of New Structural Economics, Peking University</li>
-          <li>Oct 2024 · The 23rd National Regional Economics Discipline Construction Annual Conference, Institute of Regional and Urban Economics, Renmin University of China</li>
-        </ul>
-      </div>
-    </div>
+<!-- 竞赛项目 -->
+<div class="card-block" id="competitions">
+  <h2 class="block-title">Research &amp; Competition Projects</h2>
 
-    <!-- Research & Competition Projects -->
-    <div class="card-block" id="competitions">
-      <h2 class="block-title">Research &amp; Competition Projects</h2>
-
-      <div class="comp-item">
-        <strong>Trials of The Third Business Data Analysis (Business Data Analysis and AI Application Direction)</strong>
-        <p class="meta">May 2025 – Jun 2025</p>
-        <ul class="comp-detail">
-          <li>Utilized a combined methodology of data collection, cleaning, mining, machine learning, and agent development on a real e-commerce dataset provided by the competition; applied Excel, BI tools, and AI platforms to conduct multi-dimensional business data analysis and construct intelligent applications.</li>
-          <li>Analyzed corporate market landscape, product competitiveness, store operational health, and consumer behavior patterns; extracted data insights through clustering, prediction, and market basket analysis models; built an AI-powered customer service chatbot to enhance business decision-making efficiency and automation.</li>
-          <li>Findings demonstrated that data analysis and AI applications significantly improve operational insight and decision-making accuracy, providing solutions and references for corporate digital transformation in e-commerce.</li>
-        </ul>
-      </div>
-
-      <div class="comp-item">
-        <strong>"CP Cup" The National College Student Market Research and Analysis Competition</strong>
-        <p class="project-name">Project: Research on the Impact of AIGC Usage on Knowledge Dissemination Effectiveness Based on the SOR Model</p>
-        <p class="meta">Feb 2025 – May 2025</p>
-        <ul class="comp-detail">
-          <li>Targeted youth aged 14-35 in Guangdong Province, analyzing the relationship between AIGC usage, the new digital divide, and knowledge dissemination effects based on the SOR model.</li>
-          <li>Applied quantitative methods (descriptive statistics, cluster analysis, variance analysis, CFA, and SEM) to explore data patterns and ensure reliable and valid results.</li>
-          <li>Proposed dissemination strategies for governments, educational institutions, and enterprises to help bridge the new digital divide and enhance communication efficiency.</li>
-        </ul>
-      </div>
-
-      <div class="comp-item">
-        <strong>Guangdong Provincial "Climbing Plan" Special Fund for Technological Innovation</strong>
-        <p class="project-name">Project: Research on the Influence Mechanism of Consumer Willingness to Purchase Fruit via Live Streaming</p>
-        <p class="meta">Jan 2024 – Jan 2025</p>
-        <ul class="comp-detail">
-          <li>Constructed a model of factors based on the Stimulus-Organism-Response (S-O-R) theory.</li>
-          <li>Designed and distributed questionnaires (N=1000+); validated hypotheses using SEM; research outcomes were adopted by county-level e-commerce initiatives.</li>
-          <li>Proposed "segmented marketing strategies" incorporating K-means clustering to improve conversion rates.</li>
-          <li>Completed relevant research reports; aligned findings with live streaming sales practices under the "Hundreds, Thousands, Tens of Thousands Project", providing theoretical support and practical solutions for fruit farmers to increase agricultural product sales and support rural revitalization.</li>
-        </ul>
-      </div>
-
-      <div class="comp-item">
-        <strong>National College Student Entrepreneurship Competition</strong>
-        <p class="project-name">Project: Influence Mechanism and Effects of Green Economy on High-Quality Energy Development under "Dual Carbon" Goals</p>
-        <p class="meta">Apr 2024 – Apr 2025</p>
-        <ul class="comp-detail">
-          <li>Conducted literature review, inductive summary, and empirical analysis; utilized data from 30 provinces (2015-2021) and the entropy weight method to measure green economy and high-quality energy development.</li>
-          <li>Analyzed the direct effect of green economy on high-quality energy development, the mediating effect of technological progress, the moderating role of constraining government behavior, as well as its spatial spillover effects and regional heterogeneity.</li>
-          <li>Results indicated that the green economy significantly promotes high-quality energy development with observable spatial spillover effects and regional heterogeneity, providing policy recommendations for energy transition and sustainable development.</li>
-        </ul>
-      </div>
-
-      <div class="comp-item">
-        <strong>National Collegiate Statistical Modeling Contest</strong>
-        <p class="project-name">Project: Impact of Officials' Tenure on Corporate Environmental Performance</p>
-        <p class="meta">Mar 2024 – Jul 2024 · First Prize, Guangdong Province</p>
-        <ul class="comp-detail">
-          <li>Constructed panel regression models based on data from prefecture-level city officials and listed companies (2010-2020) to explore government-enterprise environmental linkage mechanisms.</li>
-          <li>Empirical findings revealed a U-shaped relationship between tenure length and corporate environmental performance, moderated by market competition and public supervision.</li>
-          <li>Proposed a government-led, multi-stakeholder collaborative governance solution, offering theoretical support and policy pathways for the coordinated development of the economy and the environment.</li>
-        </ul>
-      </div>
-    </div>
-
+  <div class="comp-item">
+    <strong>Trials of The Third Business Data Analysis (Business Data Analysis and AI Application Direction)</strong>
+    <p class="meta">May 2025 – Jun 2025</p>
+    <ul class="comp-detail">
+      <li>Utilized a combined methodology of data collection, cleaning, mining, machine learning, and agent development on a real e-commerce dataset provided by the competition; applied Excel, BI tools, and AI platforms to conduct multi-dimensional business data analysis and construct intelligent applications.</li>
+      <li>Analyzed corporate market landscape, product competitiveness, store operational health, and consumer behavior patterns; extracted data insights through clustering, prediction, and market basket analysis models; built an AI-powered customer service chatbot to enhance business decision-making efficiency and automation.</li>
+      <li>Findings demonstrated that data analysis and AI applications significantly improve operational insight and decision-making accuracy, providing solutions and references for corporate digital transformation in e-commerce.</li>
+    </ul>
   </div>
 
-  <!-- 右侧固定目录 -->
-  <div class="pub-sidebar">
-    <div class="toc-box">
-      <h4>Contents</h4>
-      <ul>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#competitions">Research &amp; Competition Projects</a></li>
-      </ul>
-    </div>
+  <div class="comp-item">
+    <strong>"CP Cup" The National College Student Market Research and Analysis Competition</strong>
+    <p class="project-name">Project: Research on the Impact of AIGC Usage on Knowledge Dissemination Effectiveness Based on the SOR Model</p>
+    <p class="meta">Feb 2025 – May 2025</p>
+    <ul class="comp-detail">
+      <li>Targeted youth aged 14-35 in Guangdong Province, analyzing the relationship between AIGC usage, the new digital divide, and knowledge dissemination effects based on the SOR model.</li>
+      <li>Applied quantitative methods (descriptive statistics, cluster analysis, variance analysis, CFA, and SEM) to explore data patterns and ensure reliable and valid results.</li>
+      <li>Proposed dissemination strategies for governments, educational institutions, and enterprises to help bridge the new digital divide and enhance communication efficiency.</li>
+    </ul>
   </div>
 
+  <div class="comp-item">
+    <strong>Guangdong Provincial "Climbing Plan" Special Fund for Technological Innovation</strong>
+    <p class="project-name">Project: Research on the Influence Mechanism of Consumer Willingness to Purchase Fruit via Live Streaming</p>
+    <p class="meta">Jan 2024 – Jan 2025</p>
+    <ul class="comp-detail">
+      <li>Constructed a model of factors based on the Stimulus-Organism-Response (S-O-R) theory.</li>
+      <li>Designed and distributed questionnaires (N=1000+); validated hypotheses using SEM; research outcomes were adopted by county-level e-commerce initiatives.</li>
+      <li>Proposed "segmented marketing strategies" incorporating K-means clustering to improve conversion rates.</li>
+      <li>Completed relevant research reports; aligned findings with live streaming sales practices under the "Hundreds, Thousands, Tens of Thousands Project", providing theoretical support and practical solutions for fruit farmers to increase agricultural product sales and support rural revitalization.</li>
+    </ul>
+  </div>
+
+  <div class="comp-item">
+    <strong>National College Student Entrepreneurship Competition</strong>
+    <p class="project-name">Project: Influence Mechanism and Effects of Green Economy on High-Quality Energy Development under "Dual Carbon" Goals</p>
+    <p class="meta">Apr 2024 – Apr 2025</p>
+    <ul class="comp-detail">
+      <li>Conducted literature review, inductive summary, and empirical analysis; utilized data from 30 provinces (2015-2021) and the entropy weight method to measure green economy and high-quality energy development.</li>
+      <li>Analyzed the direct effect of green economy on high-quality energy development, the mediating effect of technological progress, the moderating role of constraining government behavior, as well as its spatial spillover effects and regional heterogeneity.</li>
+      <li>Results indicated that the green economy significantly promotes high-quality energy development with observable spatial spillover effects and regional heterogeneity, providing policy recommendations for energy transition and sustainable development.</li>
+    </ul>
+  </div>
+
+  <div class="comp-item">
+    <strong>National Collegiate Statistical Modeling Contest</strong>
+    <p class="project-name">Project: Impact of Officials' Tenure on Corporate Environmental Performance</p>
+    <p class="meta">Mar 2024 – Jul 2024 · First Prize, Guangdong Province</p>
+    <ul class="comp-detail">
+      <li>Constructed panel regression models based on data from prefecture-level city officials and listed companies (2010-2020) to explore government-enterprise environmental linkage mechanisms.</li>
+      <li>Empirical findings revealed a U-shaped relationship between tenure length and corporate environmental performance, moderated by market competition and public supervision.</li>
+      <li>Proposed a government-led, multi-stakeholder collaborative governance solution, offering theoretical support and policy pathways for the coordinated development of the economy and the environment.</li>
+    </ul>
+  </div>
 </div>

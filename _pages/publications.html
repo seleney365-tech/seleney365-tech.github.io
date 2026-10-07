@@ -80,14 +80,6 @@ author_profile: true
     color: #666;
     font-size: 0.9em;
   }
-  .pub-item a {
-    color: #2a7ae2;
-    font-size: 0.9em;
-    text-decoration: none;
-  }
-  .pub-item a:hover {
-    text-decoration: underline;
-  }
   .conf-list, .comp-detail {
     margin-top: 6px;
     padding-left: 20px;
@@ -97,6 +89,23 @@ author_profile: true
     color: #444;
     line-height: 1.6;
     margin-bottom: 4px;
+  }
+
+  /* 知网按钮 */
+  .pub-button {
+    display: inline-block;
+    background: #2a7ae2;
+    color: #ffffff !important;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-decoration: none !important;
+    margin-top: 8px;
+    transition: background 0.2s;
+  }
+  .pub-button:hover {
+    background: #1a4f8a;
   }
 
   /* 窄屏 */
@@ -125,8 +134,8 @@ author_profile: true
   <div class="pub-item">
     <strong>The Impact of Integrated Government Services on Inter-Provincial Capital Cross-Regional Flows</strong>
     <p class="meta">Zhou D., <strong>Yang S.</strong>, Li P. · <em>World Economy Studies</em> · 2025</p>
-    <p><a href="https://oversea.cnki.net/kcms2/article/abstract?v=q63SQ8OIxqNcJWNKHvPio2TCXGc4FyYur743llZGB5DKx6PyrCFNYnGLNv9rnZeUYOxKu8v-1DnXnSO2cHUmBT4K8yNQgPhIFcz6newICykYfmk2gMtowYmPXg1-Rm-xc1YCkAUudMqOIdMkZ_2UrmuRXN3gTjflattBrOIJO1Q=&uniplatform=OVERSEA" target="_blank" rel="noopener">View on CNKI (知网) →</a></p>
-    <p class="meta" style="margin-top: 8px;"><strong>Conference Presentations:</strong></p>
+    <p><a class="pub-button" href="https://oversea.cnki.net/kcms2/article/abstract?v=q63SQ8OIxqNcJWNKHvPio2TCXGc4FyYur743llZGB5DKx6PyrCFNYnGLNv9rnZeUYOxKu8v-1DnXnSO2cHUmBT4K8yNQgPhIFcz6newICykYfmk2gMtowYmPXg1-Rm-xc1YCkAUudMqOIdMkZ_2UrmuRXN3gTjflattBrOIJO1Q=&uniplatform=OVERSEA" target="_blank" rel="noopener">View on CNKI (知网) →</a></p>
+    <p class="meta" style="margin-top: 12px;"><strong>Conference Presentations:</strong></p>
     <ul class="conf-list">
       <li>Oct 2024 · The 2nd New Structural Economics South China Symposium, Institute of New Structural Economics, Peking University</li>
       <li>Oct 2024 · The 23rd National Regional Economics Discipline Construction Annual Conference, Institute of Regional and Urban Economics, Renmin University of China</li>

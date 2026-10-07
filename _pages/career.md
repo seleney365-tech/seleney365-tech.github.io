@@ -6,17 +6,14 @@ author_profile: true
 ---
 
 <style>
-  /* 目录：浮动到右上角，不占用主内容宽度 */
+  /* 目录：右上角小框，不浮动，靠右对齐 */
   .toc-box {
-    float: right;
-    width: 220px;
-    margin: 0 0 20px 25px;
+    width: 240px;
+    margin: 0 0 25px auto;   /* auto 让它靠右 */
     background: #f5f8fc;
     border: 1px solid #d0d7de;
     border-radius: 8px;
     padding: 14px 18px;
-    position: sticky;
-    top: 80px;
   }
   .toc-box h4 {
     margin: 0 0 8px 0;
@@ -39,14 +36,15 @@ author_profile: true
     text-decoration: underline;
   }
 
-  /* 卡片式区块 */
+  /* 卡片：占满整行，不被压缩 */
   .card-block {
     background: #fafbfd;
     border: 1px solid #e1e4e8;
     border-radius: 10px;
     padding: 20px 24px;
     margin-bottom: 2em;
-    clear: both;
+    width: 100%;
+    box-sizing: border-box;
   }
   .card-block .block-title {
     color: #2a7ae2;
@@ -58,7 +56,6 @@ author_profile: true
     border-bottom: 2px solid #2a7ae2;
   }
 
-  /* 条目 */
   .exp-item {
     margin-bottom: 1.5em;
   }
@@ -80,19 +77,9 @@ author_profile: true
     color: #666;
     font-size: 0.9em;
   }
-
-  /* 小屏：目录取消浮动，回到顶部 */
-  @media (max-width: 768px) {
-    .toc-box {
-      float: none;
-      width: 100%;
-      margin: 0 0 20px 0;
-      position: static;
-    }
-  }
 </style>
 
-<!-- 目录 -->
+<!-- 目录：靠右 -->
 <div class="toc-box">
   <h4>Contents</h4>
   <ul>
